@@ -1,1 +1,1 @@
-for array
+basic c programs
