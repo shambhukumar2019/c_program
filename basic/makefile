@@ -1,3 +1,4 @@
+# edit the FILE name as per your c program file
 FILE = swap_num
 #SRC = posnum
 #EXECUTABLE = posnum
