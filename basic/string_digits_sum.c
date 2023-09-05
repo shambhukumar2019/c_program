@@ -13,6 +13,8 @@ int main(void)
 	printf("----------find sum of digits in given character string---------\n\n");
 	printf("!!!!!!--Attention: enter string without whitespace only--!!!!!!\n");
 	printf("enter string = ");
+	
+	//store chars until space, space and after that are read in stdin but not stored in array
 	scanf("%s",array);				//store input string in array
 	
 	sum = str_digit_sum(array);		//call this function and pass given array as parameter
