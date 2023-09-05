@@ -9,7 +9,7 @@ int main(void)
 {
 	char array[MAX_INDEX] = {0};	//initiallize array with '\0' at each of its index
 	int sum;
-
+	
 	printf("----------find sum of digits in given character string---------\n\n");
 	printf("!!!!!!--Attention: enter string without whitespace only--!!!!!!\n");
 	printf("enter string = ");
