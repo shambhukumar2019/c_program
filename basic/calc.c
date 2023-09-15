@@ -1,20 +1,23 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
+// add two values
 float add(float,float);
 
-
+// subtract two values
 float sub(float,float);
 
-
+// multiply two values
 float mul(float,float);
 
-
+// divide two values
 float divd(float,float);
 
+// check if value is a digit
+//int isdigit(int);
 
-int isdigit(int);
+// check if value is a number only
+//int isnum(int);
 
 int main(void)
 {
@@ -25,12 +28,12 @@ int main(void)
 	printf("\n----------------give two values and 1 operation (+, -, /, *) to perform on them-------------------\n");
 
 	printf("enter value 1 = ");
-	scanf("%f",&val1);
+	scanf("%f",&val1);	//input 1st value
 	printf("enter value 2 = ");
-	scanf("%f",&val2);
-	operand = getchar();
+	scanf("%f",&val2);	//input 2nd value
+	operand = getchar();	//remove unwanted \n character from stdin buffer
 	printf("enter operation: ");
-	scanf("%c",&operand);
+	scanf("%c",&operand);	//input operation to perform on input values
 	
 	printf("perform: %0.2f %c %0.2f\n",val1,operand,val2);
 
@@ -38,25 +41,25 @@ int main(void)
 	{
 		case '+':
 			{
-				result = add(val1,val2);
+				result = add(val1,val2);	//addition
 				break;
 			}
 		case '-':
 			{
-				result = sub(val1,val2);
+				result = sub(val1,val2);	//subtraction
 				break;
 			}
 		case '*':
 			{
-				result = mul(val1,val2);
+				result = mul(val1,val2);	//multiplication
 				break;
 			}
 		case '/':
 			{
-				result = divd(val1,val2);
+				result = divd(val1,val2);	//division
 				break;
 			}
-		default:
+		default:	//run if none of the case valid
 			printf("!!! error: please enter valid values and operations like  +, -, *, /\n");
 	}
 
@@ -92,3 +95,12 @@ float divd(float v1, float v2)
 		return (v1 / v2);
 	}
 }
+
+//int isdigit(int value)
+//{
+//	if(((char)value >= '0') && ((char)value <= '9'))
+//		return 1;
+//	else
+//		return 0;
+//}
+
