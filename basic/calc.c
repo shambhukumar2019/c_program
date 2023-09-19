@@ -19,14 +19,25 @@ float divd(float,float);
 // check if value is a number only
 //int isnum(int);
 
-int main(void)
+/* 	cmd to run =>  ./calc 2 5 +
+	argc = 4
+	argv[0] = ./calc
+	argv[1] = 2
+	argv[2] = 5
+	argv[3] = +
+*/
+int main(int argc,char *argv[])
 {
 	float val1, val2;
 	char operand;
 	float result = 0;
 
-	printf("\n----------------give two values and 1 operation (+, -, /, *) to perform on them-------------------\n");
-
+	printf("\n----------------give two values and 1 operation (+, -, /, x) to perform on them-------------------\n");
+	printf("========input format:  ./objfile value1 value2 operation  ========\n");
+	val1 = atof(argv[1]);	//make argv[1] float
+	val2 = atof(argv[2]);	//make argv[2] float
+	operand = *argv[3];		//put value at [0] of argv[3] to operand
+/*
 	printf("enter value 1 = ");
 	scanf("%f",&val1);	//input 1st value
 	printf("enter value 2 = ");
@@ -34,7 +45,7 @@ int main(void)
 	operand = getchar();	//remove unwanted \n character from stdin buffer
 	printf("enter operation: ");
 	scanf("%c",&operand);	//input operation to perform on input values
-	
+*/	
 	printf("perform: %0.2f %c %0.2f\n",val1,operand,val2);
 
 	switch(operand)
@@ -49,7 +60,8 @@ int main(void)
 				result = sub(val1,val2);	//subtraction
 				break;
 			}
-		case '*':
+		case 'x':
+		case 'X':
 			{
 				result = mul(val1,val2);	//multiplication
 				break;
