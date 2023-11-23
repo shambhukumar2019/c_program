@@ -1,7 +1,7 @@
 # edit the FILE name as per your c program file
-FILE = matrix_rc_sum
+FILE = cnt_file_params
 CC = gcc
-C_FLAGS = -o -Wall
+C_FLAGS = -Wall -o
 
 target : $(FILE).elf
 
