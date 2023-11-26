@@ -1,5 +1,5 @@
 # edit the FILE name as per your c program file
-FILE = armstrong_num
+FILE = pallindrome
 CC = gcc
 C_FLAGS = -Wall -o
 
