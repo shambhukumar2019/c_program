@@ -1,5 +1,5 @@
 # edit the FILE name as per your c program file
-FILE = pallindrome
+FILE = leap_year
 CC = gcc
 C_FLAGS = -Wall -o
 
