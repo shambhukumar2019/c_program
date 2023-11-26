@@ -1,6 +1,10 @@
 #include <stdio.h>
 
+// 145 -> 1! + 4! + 5! 
+// 1 + 24 + 120 = 145
+// its strong number
 int isstrong(int);
+
 int factorial(int);
 
 int main()

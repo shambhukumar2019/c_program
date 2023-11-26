@@ -1,5 +1,8 @@
 #include<stdio.h>
 
+// 1 -> 1^1 = 1
+// 370 -> 3^3 + 7^3 + 0^3
+// 370 = its armstrong
 int isarmstrong(int);
 
 int power(int,int);

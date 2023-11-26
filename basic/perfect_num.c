@@ -1,5 +1,6 @@
 #include<stdio.h>
 
+// 6 -> 1 + 2 +3 = 6, its perfect
 int isperfect(int);
 
 int main(void)
