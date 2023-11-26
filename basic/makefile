@@ -1,5 +1,5 @@
 # edit the FILE name as per your c program file
-FILE = cnt_file_params
+FILE = armstrong_num
 CC = gcc
 C_FLAGS = -Wall -o
 
