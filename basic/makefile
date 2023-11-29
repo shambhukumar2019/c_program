@@ -1,5 +1,5 @@
 # edit the FILE name as per your c program file
-FILE = leap_year
+FILE = disp_code
 CC = gcc
 C_FLAGS = -Wall -o
 
