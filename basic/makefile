@@ -1,5 +1,5 @@
 # edit the FILE name as per your c program file
-FILE = atm_machine
+FILE = emi_calc
 CC = gcc
 C_FLAGS = -Wall -o
 
