@@ -1,4 +1,4 @@
-FILE = nest_stc
+FILE = adv_stc_pntr
 CC = gcc
 C_FLAGS = -Wall
 
@@ -8,4 +8,4 @@ $(FILE).elf: $(FILE).c
 	$(CC) $(C_FLAGS) $^ -o $@
 
 clean:
-	rm -rf *.elf
+	rm -rf *.elf *.out
