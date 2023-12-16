@@ -1,5 +1,5 @@
 # edit the FILE name as per your c program file
-FILE = emi_calc
+FILE = dectobin
 CC = gcc
 C_FLAGS = -Wall -o
 
