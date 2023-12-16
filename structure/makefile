@@ -1,4 +1,4 @@
-FILE = adv_stc_pntr
+FILE = union
 CC = gcc
 C_FLAGS = -Wall
 
