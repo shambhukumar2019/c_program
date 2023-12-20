@@ -1,0 +1,36 @@
+Breakpoint 1 at 0x1265: file pallindrome_str.c, line 20.
+The program is not being run.
+Starting program: /home/shambhukumar/c_program/string/pallindrome_str.elf 
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at pallindrome_str.c:20
+20		while(i < (str_len - i - 1))
+The history is empty.
+22			if(s[i] != s[str_len - i - 1])
+27			i += 1;
+The history is empty.
+$1 = "naman\000\000\000\000"
+$2 = 110 'n'
+A syntax error in expression, near `'.
+$3 = 110 'n'
+20		while(i < (str_len - i - 1))
+main () at pallindrome_str.c:20
+20		while(i < (str_len - i - 1))
+22			if(s[i] != s[str_len - i - 1])
+27			i += 1;
+20		while(i < (str_len - i - 1))
+$4 = 109 'm'
+$5 = 109 'm'
+29		if(flag == 0)
+30			printf("word is pallindrome\n");
+34		return 0;
+35	}
+__libc_start_call_main (main=main@entry=0x5555555551c9 <main>, argc=argc@entry=1, argv=argv@entry=0x7fffffffdfa8) at ../sysdeps/nptl/libc_start_call_main.h:74
+74	../sysdeps/nptl/libc_start_call_main.h: No such file or directory.
+[Inferior 1 (process 3264) exited normally]

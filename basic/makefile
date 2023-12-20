@@ -1,5 +1,5 @@
 # edit the FILE name as per your c program file
-FILE = dectobin
+FILE = dectohex
 CC = gcc
 C_FLAGS = -Wall -o
 
