@@ -1,3 +1,4 @@
 *.pdf
 *.doc
 *.out
+.gdb_history
