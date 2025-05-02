@@ -8,10 +8,23 @@ void cbuf_init(cbuf_t *cbuf_ptr)
     cbuf_ptr->hptr = 0;
     cbuf_ptr->tptr = 0;
     cbuf_ptr->size_of_buf = MAX_BUF_SIZE;
+
+    cbuf_ptr->buf = (int*)calloc(MAX_BUF_SIZE, sizeof(int));
+    if(cbuf_ptr->buf == NULL)
+    {
+        perror("heap allocation failed!");
+        exit(EXIT_FAILURE);
+    }
 }
 
 
-cbuf_status is_cbuf_full(cbuf_t *cbuf_ptr)
+/**
+ * @brief check if buffer is full
+ * 
+ * @param cbuf_ptr pointer to circular buffer
+ * @return cbuf_status buffer status
+ */
+static cbuf_status is_cbuf_full(cbuf_t *cbuf_ptr)
 {
     if(cbuf_ptr->element_num == cbuf_ptr->size_of_buf)
     {
@@ -22,7 +35,13 @@ cbuf_status is_cbuf_full(cbuf_t *cbuf_ptr)
 }
 
 
-cbuf_status is_cbuf_empty(cbuf_t *cbuf_ptr)
+/**
+ * @brief check if buffer is empty
+ * 
+ * @param cbuf_ptr pointer to circular buffer
+ * @return cbuf_status buffer status
+ */
+static cbuf_status is_cbuf_empty(cbuf_t *cbuf_ptr)
 {
     if(cbuf_ptr->element_num == 0)
     {
@@ -52,7 +71,7 @@ cbuf_status cbuf_write(cbuf_t *cbuf_ptr, int num)
 
 int cbuf_read(cbuf_t *cbuf_ptr)
 {
-    int data = 0;
+    static int data = 0;
 
     if(CBUF_EMPTY == is_cbuf_empty(cbuf_ptr))
     {
@@ -69,7 +88,7 @@ int cbuf_read(cbuf_t *cbuf_ptr)
 }
 
 
-uint8_t inline cbuf_elem_num(cbuf_t *cbuf_ptr)
+uint8_t cbuf_elem_num(cbuf_t *cbuf_ptr)
 {
     if(CBUF_EMPTY == is_cbuf_empty(cbuf_ptr))
     {
@@ -88,5 +107,12 @@ void cbuf_reset(cbuf_t *cbuf_ptr)
         cbuf_ptr->buf[i] = 0;
     }
     
+}
+
+
+void cbuf_free(cbuf_t *cbuf_ptr)
+{
+    free((void*)cbuf_ptr->buf);
+    cbuf_ptr->buf = NULL;
 }
 

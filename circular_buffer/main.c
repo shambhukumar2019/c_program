@@ -12,15 +12,17 @@ int main(int argc, char *argv[])
     cbuf_reset(&buf1);
     cbuf_write(&buf1, 20);
     cbuf_write(&buf1, 10);
+    
     val = cbuf_read(&buf1);
-
     printf("read = %d\n",val);
+
     val = cbuf_read(&buf1);
-
     printf("read = %d\n",val);
+
     val = cbuf_read(&buf1);
-
     printf("read = %d\n",val);
+
+    cbuf_free(&buf1);
 
     return 0;
 }
