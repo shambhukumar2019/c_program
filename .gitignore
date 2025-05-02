@@ -3,3 +3,5 @@
 *.out
 .gdb_history
 *.o
+*.vscode
+
